@@ -6,12 +6,9 @@
 
 /* ========== Keroseen grids ========== */
 .keroseen-grid {
-    .row:before, .row:after {
-        content: " ";
-        display: table;
-        &:after {
-            clear: both;
-        }
+    @include clearfix;
+    .row {
+        @include clearfix;
     }
     .col {
         -moz-box-sizing: border-box;
@@ -48,7 +45,7 @@
             // tablets
             @media screen and (min-width: 768px) and (max-width: 1024px) {
                 @for $i from 1 through $grid {
-                    .col-#{$i}-mid {
+                    .col-#{$i}-middle {
                         @extend .col-#{$i};
                     }
                 }
