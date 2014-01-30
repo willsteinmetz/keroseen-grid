@@ -4,6 +4,16 @@
 // This file defines the grids available in Keroseen.
 //
 
+// generate column sizing
+@mixin keroseen_grid_generate-column($width, $grid, $i, $size) {
+    .#{$size}-#{$i} {
+        width: $width;
+        @if ($i == $grid) {
+            margin-left: 0;
+        }
+    }
+}
+
 /* ========== Keroseen grids ========== */
 .keroseen-grid {
     @include clearfix;
@@ -24,38 +34,30 @@
         &.grid-#{$grid} {
             $col-width: (100% - (1 * ($grid - 1))) / $grid;
             @for $i from 1 through $grid {
-                .col-#{$i} {
-                    $width: ($i * $col-width) + (($i - 1) * 1);
-                    width: $width;
-                    @extend .col;
-                    @if ($i == $grid) {
-                        margin-left: 0;
+                $width: ($i * $col-width) + (($i - 1) * 1);
+                @include keroseen_grid_generate-column($width, $grid, $i, large);
+                @if ($i < $grid) {
+                    .push-#{$i} {
+                        margin-right: 100% - $width;
                     }
-                    @if ($i < $grid) {
-                        &.push-#{$i} {
-                            margin-right: 100% - $width;
-                        }
-                        &.pull-#{$i} {
-                            margin-right: 0;
-                            margin-left: 100% - $width;
-                        }
+                    .pull-#{$i} {
+                        margin-right: 0;
+                        margin-left: 100% - $width;
                     }
                 }
             }
             // tablets
             @media screen and (min-width: 768px) and (max-width: 1024px) {
                 @for $i from 1 through $grid {
-                    .col-#{$i}-middle {
-                        @extend .col-#{$i};
-                    }
+                    $width: ($i * $col-width) + (($i - 1) * 1);
+                    @include keroseen_grid_generate-column($width, $grid, $i, middle);
                 }
             }
             // mobile
             @media screen and (min-width: 320px) and (max-width: 480px) {
                 @for $i from 1 through $grid {
-                    .col-#{$i}-small {
-                        @extend .col-#{$i};
-                    }
+                    $width: ($i * $col-width) + (($i - 1) * 1);
+                    @include keroseen_grid_generate-column($width, $grid, $i, small);
                 }
             }
         }
