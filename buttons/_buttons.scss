@@ -10,6 +10,7 @@
 // button specific settings
 // custom variables should start $keroseen_buttons_ to help namespace variables
 //
+$keroseen_buttons_custom-colors: false;
 
 //
 // include the components
@@ -17,3 +18,4 @@
 //
 /* ========== Keroseen buttons ========== */
 @import 'skeleton';
+@import 'underscore';

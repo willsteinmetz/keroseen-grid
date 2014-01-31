@@ -1,0 +1,32 @@
+//
+// @author Will Steinmetz
+// @file _underscore.scss
+// @version 0.0.1
+// @licence MIT
+// This file defines the underscore styles for the button component available in Keroseen.
+//
+
+a, button, input[type="submit"], input[type="button"] {
+    &.keroseen-button {
+        @include single-transition(all, 0.15s, ease-in-out);
+        &.underscore {
+            @each $color in $keroseen-default-colors {
+                &.#{nth($color, 1)} {
+                    background-color: nth($color, 3);
+                    border-bottom: solid 0.1875em nth($color, 2);
+                    color: nth($color, 5);
+                    &:hover, &:focus {
+                        background-color: nth($color, 2);
+                        border-bottom-color: nth($color, 3);
+                    }
+                    &.disabled {
+                        &:hover, &:focus {
+                            background-color: nth($color, 3);
+                            border-bottom-color: nth($color, 2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
