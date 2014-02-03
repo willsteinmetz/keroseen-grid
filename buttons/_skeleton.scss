@@ -8,6 +8,7 @@
 
 a, button, input[type="submit"], input[type="button"] {
     &.keroseen-button {
+        outline: none;
         text-decoration: none;
         background: none;
         border: none;

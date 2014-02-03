@@ -8,24 +8,31 @@
 
 a, button, input[type="submit"], input[type="button"] {
     &.keroseen-button {
-        @include single-transition(all, 0.15s, ease-in-out);
         &.underscore {
+            @include single-transition(all, 0.1s, ease-in-out);
             @each $color in $keroseen-default-colors {
                 &.#{nth($color, 1)} {
                     background-color: nth($color, 3);
-                    border-bottom: solid 0.1875em nth($color, 2);
+                    @include single-box-shadow(nth($color, 2), 0, 0.1875em, 0);
                     color: nth($color, 5);
                     &:hover, &:focus {
                         background-color: nth($color, 2);
-                        border-bottom-color: nth($color, 3);
+                        @include single-box-shadow(nth($color, 3), 0, 0.1875em, 0);
+                    }
+                    &:active {
+                        margin-top: 0.1875em;
+                        @include single-box-shadow(none);
                     }
                     &.disabled {
                         &:hover, &:focus {
                             background-color: nth($color, 3);
-                            border-bottom-color: nth($color, 2);
+                            @include single-box-shadow(nth($color, 2), 0, 0.1875em, 0);
                         }
                     }
                 }
+            }
+            &.rounded {
+                @include border-radius($keroseen_buttons_underscore-radius);
             }
         }
     }

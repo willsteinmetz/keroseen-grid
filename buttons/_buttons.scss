@@ -11,6 +11,7 @@
 // custom variables should start $keroseen_buttons_ to help namespace variables
 //
 $keroseen_buttons_custom-colors: false;
+$keroseen_buttons_default-radius: 0.1875em;
 
 //
 // include the components
@@ -18,4 +19,6 @@ $keroseen_buttons_custom-colors: false;
 //
 /* ========== Keroseen buttons ========== */
 @import 'skeleton';
+// underscore theme
+$keroseen_buttons_underscore-radius: 0.3125em;
 @import 'underscore';
