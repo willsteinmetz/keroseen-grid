@@ -15,19 +15,13 @@ a, button, input[type="submit"], input[type="button"] {
                     background-color: nth($color, 3);
                     @include single-box-shadow(nth($color, 2), 0, 0.1875em, 0);
                     color: nth($color, 5);
-                    &:hover, &:focus {
+                    &:hover:not(.disabled), &:focus:not(.disabled) {
                         background-color: nth($color, 2);
                         @include single-box-shadow(nth($color, 3), 0, 0.1875em, 0);
                     }
-                    &:active {
+                    &:active:not(.disabled) {
                         margin-top: 0.1875em;
                         @include single-box-shadow(none);
-                    }
-                    &.disabled {
-                        &:hover, &:focus {
-                            background-color: nth($color, 3);
-                            @include single-box-shadow(nth($color, 2), 0, 0.1875em, 0);
-                        }
                     }
                 }
             }
