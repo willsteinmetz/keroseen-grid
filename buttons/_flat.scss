@@ -15,16 +15,10 @@ a, button, input[type="submit"], input[type="button"] {
             @each $color in $keroseen-default-colors {
                 &.#{nth($color, 1)} {
                     background-color: lighten(nth($color, 2), 2.5%);
-//                    @include single-box-shadow(nth($color, 2), 0, 0.1875em, 0);
                     color: nth($color, 5);
                     &:hover:not(.disabled), &:focus:not(.disabled) {
                         background-color: lighten(nth($color, 4), 2.5%);
-//                        @include single-box-shadow(nth($color, 3), 0, 0.1875em, 0);
                     }
-//                    &:active:not(.disabled) {
-//                        margin-top: 0.1875em;
-//                        @include single-box-shadow(none);
-//                    }
                 }
             }
             &.primary {
