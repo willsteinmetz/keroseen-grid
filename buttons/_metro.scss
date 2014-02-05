@@ -23,10 +23,10 @@ a, button, input[type="submit"], input[type="button"] {
                     &:active:not(.disabled) {
                         background-color: darken(nth($color, 2), 5%);
                     }
-                    &.primary {
-                        padding: .675em 1.625em;
-                    }
                 }
+            }
+            &.primary {
+                padding: .675em 1.625em;
             }
         }
     }
