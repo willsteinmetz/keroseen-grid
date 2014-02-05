@@ -10,6 +10,7 @@ a, button, input[type="submit"], input[type="button"] {
     &.keroseen-button {
         &.metro {
             padding: 0.375em 1.125em;
+            font-weight: 100;
             @include single-transition(all, 0.1s, ease-in-out);
             @each $color in $keroseen-default-colors {
                 &.#{nth($color, 1)} {
