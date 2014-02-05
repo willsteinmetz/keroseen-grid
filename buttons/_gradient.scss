@@ -1,0 +1,35 @@
+//
+// @author Will Steinmetz
+// @file _gradient.scss
+// @version 0.0.1
+// @licence MIT
+// This file defines the gradient styles for the button component available in Keroseen.
+//
+
+a, button, input[type="submit"], input[type="button"] {
+    &.keroseen-button {
+        &.gradient {
+            @include single-transition(all, 0.1s, ease-in-out);
+            padding: 0.375em 1.125em;
+            @each $color in $keroseen-default-colors {
+                &.#{nth($color, 1)} {
+                    @include background-image(linear-gradient(nth($color, 2), nth($color, 4)));
+                    color: nth($color, 5);
+                    &:hover:not(.disabled), &:focus:not(.disabled) {
+                        @include background-image(linear-gradient(nth($color, 3), nth($color, 2)));
+                        @include single-box-shadow(rgba(nth($color, 4), 0.5), 0, 0, 0.5em);
+                    }
+                }
+            }
+            &.primary {
+                padding: .675em 1.625em;
+            }
+            &.rounded {
+                @include border-radius($keroseen_buttons_default-radius);
+                &.primary {
+                    @include border-radius($keroseen_buttons_default-radius + 0.125);
+                }
+            }
+        }
+    }
+}
