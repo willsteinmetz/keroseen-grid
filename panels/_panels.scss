@@ -1,0 +1,29 @@
+//
+// @author Will Steinmetz
+// @file _panels.scss
+// @licence MIT
+// This file defines the settings and includes for the panel components available in Keroseen.
+//
+
+//
+// panel specific settings
+// custom variables should start $keroseen_panels_ to help namespace variables
+//
+$keroseen_panels_custom-colors: false;
+$keroseen_panels_default-radius: 0.25em;
+
+// colors to render
+$keroseen_panels_render-colors: $keroseen-default-colors;
+@if ($keroseen-custom-colors) {
+    $keroseen_panels_render-colors: $keroseen_panels_render-colors + ' ' + $keroseen-custom-colors;
+}
+@if ($keroseen_panels_custom-colors) {
+    $keroseen_panels_render-colors: $keroseen_panels_render-colors + ' ' + $keroseen_panels_custom-colors;
+}
+
+//
+// include the components
+// comment one out to not build it
+//
+/* ========== Keroseen panels ========== */
+@import 'skeleton';
