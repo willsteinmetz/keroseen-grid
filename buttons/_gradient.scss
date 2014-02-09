@@ -11,7 +11,7 @@ a, button, input[type="submit"], input[type="button"] {
         &.gradient {
             @include single-transition(all, 0.1s, ease-in-out);
             padding: 0.375em 1.125em;
-            @each $color in $keroseen-default-colors {
+            @each $color in $keroseen_buttons_render-colors {
                 &.#{nth($color, 1)} {
                     @include background-image(linear-gradient(nth($color, 2), nth($color, 4)));
                     color: nth($color, 5);

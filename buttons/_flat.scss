@@ -12,7 +12,7 @@ a, button, input[type="submit"], input[type="button"] {
             @include single-transition(all, 0.1s, ease-in-out);
             font-weight: 100;
             padding: 0.375em 1.125em;
-            @each $color in $keroseen-default-colors {
+            @each $color in $keroseen_buttons_render-colors {
                 &.#{nth($color, 1)} {
                     background-color: lighten(nth($color, 2), 2.5%);
                     color: nth($color, 5);

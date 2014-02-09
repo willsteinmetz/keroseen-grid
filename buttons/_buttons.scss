@@ -13,6 +13,15 @@
 $keroseen_buttons_custom-colors: false;
 $keroseen_buttons_default-radius: 0.1875em;
 
+// colors to render
+$keroseen_buttons_render-colors: $keroseen-default-colors;
+@if ($keroseen-custom-colors) {
+    $keroseen_buttons_render-colors: $keroseen_buttons_render-colors + ' ' + $keroseen-custom-colors;
+}
+@if ($keroseen_buttons_custom-colors) {
+    $keroseen_buttons_render-colors: $keroseen_buttons_render-colors + ' ' + $keroseen_buttons_custom-colors;
+}
+
 //
 // include the components
 // comment one out to not build it

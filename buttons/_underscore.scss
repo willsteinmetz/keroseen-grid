@@ -10,7 +10,7 @@ a, button, input[type="submit"], input[type="button"] {
     &.keroseen-button {
         &.underscore {
             @include single-transition(all, 0.1s, ease-in-out);
-            @each $color in $keroseen-default-colors {
+            @each $color in $keroseen_buttons_render-colors {
                 &.#{nth($color, 1)} {
                     background-color: nth($color, 3);
                     @include single-box-shadow(nth($color, 2), 0, 0.1875em, 0);
