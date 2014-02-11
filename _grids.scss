@@ -20,6 +20,9 @@
     @include clearfix;
     .row {
         @include clearfix;
+        &.spacer {
+            margin-bottom: 1em;
+        }
     }
     .col {
         -moz-box-sizing: border-box;
