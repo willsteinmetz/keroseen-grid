@@ -5,6 +5,35 @@
 // This file defines the bare skeleton styles for the button component available in Keroseen.
 //
 
-.keroseen-panels {
-    
+.keroseen-panel {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0.75em;
+    &.bound {
+        border: solid 1px nth(nth($keroseen-default-colors, 1), 4);
+    }
+    &.rounded {
+        @include border-radius($keroseen_panels_default-radius);
+    }
+    header, footer {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0.5em;
+        background-color: darken(nth(nth($keroseen-default-colors, 1), 2), 5%);
+    }
+    header {
+        border-bottom: solid 1px nth(nth($keroseen-default-colors, 1), 4);
+        margin: -0.75em -0.75em 0.75em -0.75em;
+        &.title span {
+            font-size: 1.375em;
+            font-weight: bold;
+        }
+    }
+    footer {
+        border-top: solid 1px nth(nth($keroseen-default-colors, 1), 4);
+        margin: 0.75em -0.75em -0.75em -0.75em;
+        &.caption span {
+            font-size: 0.75em;
+        }
+    }
 }
