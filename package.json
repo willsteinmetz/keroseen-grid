@@ -1,0 +1,11 @@
+{
+  "name": "keroseen-grid",
+  "version": "0.4.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-compass": "~0.7.1",
+    "grunt-contrib-cssmin": "~0.7.0"
+  }
+}
