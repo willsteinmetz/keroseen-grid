@@ -1,0 +1,25 @@
+{
+  "name": "keroseen-grid",
+  "version": "0.4.0",
+  "authors": [
+    "Will Steinmetz <willsteinmetz@users.noreply.github.com>"
+  ],
+  "description": "Keroseen is a user interface framework built with Sass for easy customizability.",
+  "main": "stylesheets/keroseen-grid.min.css",
+  "keywords": [
+    "css",
+    "sass",
+    "compass",
+    "keroseen",
+    "grunt"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/willsteinmetz/keroseen-grid",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
