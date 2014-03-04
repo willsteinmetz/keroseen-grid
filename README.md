@@ -33,6 +33,20 @@ If you do not wish to have the build automatically occur, you can run the build 
 
     $ grunt
 
+### Other Considerations
+
+While not required by the project, it is helpful to have a reset stylesheet such as Normalize (used by the main project) to help the grids flow smoother.
+
+### Defaults
+
+By default, the system compiles the 9, 12, 16, 20, and 24 column grids. Since it's rare that a project will use one or two different size grids, the settings file can be updated to only include some of the grids or even a custom size not listed above. Once updated, run __grunt__ in the console to recompile the stylesheet.
+
+## Bower Install
+
+Keroseen grid is available for installation via Bower. To install Keroseen grid via bower, run the following command:
+
+    $ bower install --save keroseen-grid
+
 ## Parent project
 
 The parent project can be found here [https://github.com/willsteinmetz/keroseen](https://github.com/willsteinmetz/keroseen)
