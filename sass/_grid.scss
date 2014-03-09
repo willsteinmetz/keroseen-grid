@@ -52,14 +52,14 @@
                 }
             }
             // tablets
-            @media screen and (min-width: 768px) and (max-width: 1024px) {
+            @media screen and (max-width: 1024px) {
                 @for $i from 1 through $grid {
                     $width: ($i * $col-width) + (($i - 1) * 1);
                     @include keroseen_grid_generate-column($width, $grid, $i, middle);
                 }
             }
             // mobile
-            @media screen and (min-width: 320px) and (max-width: 480px), screen and (min-width: 320px) and (max-width: 568px) {
+            @media screen and (max-width: 568px) {
                 @for $i from 1 through $grid {
                     $width: ($i * $col-width) + (($i - 1) * 1);
                     @include keroseen_grid_generate-column($width, $grid, $i, small);
