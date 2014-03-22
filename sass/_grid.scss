@@ -58,11 +58,29 @@
                     @include keroseen_grid_generate-column($width, $grid, $i, middle);
                 }
             }
+            // tablets portrait
+            @if $keroseen-grids-portrait-breaks {
+                @media screen and (max-width: 720px) {
+                    @for $i from 1 through $grid {
+                        $width: ($i * $col-width) + (($i - 1) * 1);
+                        @include keroseen_grid_generate-column($width, $grid, $i, md-portrait);
+                    }
+                }
+            }
             // mobile
             @media screen and (max-width: 568px) {
                 @for $i from 1 through $grid {
                     $width: ($i * $col-width) + (($i - 1) * 1);
                     @include keroseen_grid_generate-column($width, $grid, $i, small);
+                }
+            }
+            // mobile portrait
+            @if $keroseen-grids-portrait-breaks {
+                @media screen and (max-width: 320px) {
+                    @for $i from 1 through $grid {
+                        $width: ($i * $col-width) + (($i - 1) * 1);
+                        @include keroseen_grid_generate-column($width, $grid, $i, sm-portrait);
+                    }
                 }
             }
         }

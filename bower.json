@@ -1,8 +1,8 @@
 {
   "name": "keroseen-grid",
-  "version": "0.4.4",
+  "version": "0.5.0",
   "authors": [
-    "Will Steinmetz <willsteinmetz@users.noreply.github.com>"
+    "Will Steinmetz <keroseen@willsteinmetz.net>"
   ],
   "description": "Keroseen is a user interface framework built with Sass for easy customizability.",
   "main": "stylesheets/keroseen-grid.min.css",
