@@ -4,20 +4,17 @@
  * @package keroseen.grid
  * Homepage: https://github.com/willsteinmetz/keroseen-grid */
 /* ========== Keroseen grids ========== */
-.keroseen-grid:before, .keroseen-grid:after {
+.keroseen-grid:before, .keroseen-grid:after,
+.keroseen-grid .row:before,
+.keroseen-grid .row:after {
   content: " ";
   display: table;
 }
-.keroseen-grid:after {
-  clear: both;
-}
-.keroseen-grid .row:before, .keroseen-grid .row:after {
-  content: " ";
-  display: table;
-}
+.keroseen-grid:after,
 .keroseen-grid .row:after {
   clear: both;
 }
+
 .keroseen-grid .row.spacer {
   margin-bottom: 1em;
 }
