@@ -14,12 +14,9 @@ $breakpoints: (small 544px), (med 768px), (large 992px), (x-large 1200px)
   .#{$size}-#{$i}
     width: $width
 
-    @if $i == $grid
-      margin-left: 0
-
 =keroseen-grid-generate-column-set($grid, $size, $col-width)
   @for $i from 1 through $grid
-    $width: $i * $col-width + ($i - 1) * 1
+    $width: ($i * $col-width) + ($i - 1)
 
     +keroseen-grid-generate-column($width, $grid, $i, $size)
 
@@ -41,25 +38,23 @@ $breakpoints: (small 544px), (med 768px), (large 992px), (x-large 1200px)
     -moz-box-sizing: border-box
     box-sizing: border-box
     padding: 0 1%
-    margin-left: 1%
+    margin-left: .5%
+    margin-right: .5%
     float: left
-
-    &:first-child
-      margin-left: 0
 
   @each $grid in $keroseen-grids
     &.grid-#{$grid}
-      $col-width: (100% - 1 * ($grid - 1)) / $grid
+      $col-width: (100% / $grid) - 1
 
       @for $i from 1 through ($grid - 1)
-        $width: $i * $col-width + ($i - 1) * 1
+        $width: ($i * $col-width) + ($i - 1)
 
         .push-#{$i}
-          margin-right: $width + 1
+          margin-right: $width + 1.5
 
         .pull-#{$i}
           float: right
-          margin-right: $width + 1
+          margin-right: $width + 1.5
 
       @media screen and (max-width: 543px)
         +keroseen-grid-generate-column-set($grid, x-small, $col-width)
