@@ -14,19 +14,15 @@
     @if $i == $grid
       margin-left: 0
 
-// clearfix
-=clearfix
+/* ========== Keroseen grids ==========
+.keroseen-grid,
+.keroseen-grid .row
   &:before, &:after
     content: " "
     display: table
 
   &:after
     clear: both
-
-/* ========== Keroseen grids ==========
-.keroseen-grid,
-.keroseen-grid .row
-  +clearfix
 
 .keroseen-grid
   .row
