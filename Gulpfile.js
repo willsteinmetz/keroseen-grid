@@ -15,7 +15,7 @@ var gulp       = require('gulp'),
 
 // styles task
 gulp.task('styles', ['clean'], function () {
-  return gulp.src('src/sass/keroseen-grid.scss')
+  return gulp.src('src/sass/keroseen-grid.sass')
     .pipe(sass({
       style: 'expanded',
       loadPath: [__dirname + '/src/sass']
@@ -47,6 +47,6 @@ gulp.task('default', ['clean'], function () {
 
 // watch task
 gulp.task('watch', function() {
-  // Watch .scss files
-  gulp.watch('src/sass/**/*.scss', ['styles', 'fonts']);
+  // Watch .sass files
+  gulp.watch('src/sass/**/*.sass', ['styles']);
 });

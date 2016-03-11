@@ -2,8 +2,7 @@
  * @author Will Steinmetz
  * @license MIT
  * @package keroseen.grid
- * Homepage: https://github.com/willsteinmetz/keroseen-grid
- */
+ * Homepage: https://github.com/willsteinmetz/keroseen-grid */
 /* ========== Keroseen grids ========== */
 .keroseen-grid:before, .keroseen-grid:after {
   content: " ";
