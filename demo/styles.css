@@ -1,0 +1,14 @@
+body {
+  font-family: Arial, Geneva, Helvetica, Verdana, sans-serif;
+}
+
+.keroseen-grid {
+  background-color: #b6e1ee;
+  padding-top: 1rem;
+}
+
+.keroseen-grid .col {
+  background-color: #91cadb;
+  padding: 1rem;
+  text-align: center;
+}

@@ -11,10 +11,11 @@ var gulp       = require('gulp'),
   cleanCss     = require('gulp-clean-css'),
   rename       = require('gulp-rename'),
   clean        = require('gulp-clean'),
-  header       = require('gulp-header');
+  header       = require('gulp-header'),
+  jade         = require('gulp-jade');
 
 // styles task
-gulp.task('styles', ['clean'], function () {
+gulp.task('styles', ['clean-styles'], function () {
   return gulp.src('src/sass/keroseen-grid.sass')
     .pipe(sass({
       style: 'expanded',
@@ -33,15 +34,29 @@ gulp.task('styles', ['clean'], function () {
     .pipe(gulp.dest('dist'));
 });
 
-// clean up task
-gulp.task('clean', function () {
+// templates
+gulp.task('templates', ['clean-templates'], function() {
+  return gulp.src('src/jade/index.jade')
+    .pipe(jade())
+    .pipe(gulp.dest('demo'));
+});
+
+// style clean up task
+gulp.task('clean-styles', function () {
   return gulp.src(['dist'], {read: false})
     .pipe(clean());
 });
 
+// templates clean up task
+gulp.task('clean-templates', function () {
+  return gulp.src(['demo/**/*.html'], {read: false})
+    .pipe(clean());
+});
+
 // default task
-gulp.task('default', ['clean'], function () {
+gulp.task('default', ['clean-styles', 'clean-templates'], function () {
   gulp.start('styles');
+  gulp.start('templates');
   gulp.start('watch');
 });
 
@@ -49,4 +64,6 @@ gulp.task('default', ['clean'], function () {
 gulp.task('watch', function() {
   // Watch .sass files
   gulp.watch('src/sass/**/*.sass', ['styles']);
+  // watch .jade files
+  gulp.watch('src/jade/**/*.jade', ['templates']);
 });
