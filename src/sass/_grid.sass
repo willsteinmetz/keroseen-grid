@@ -55,11 +55,11 @@ $breakpoints: (small 544px), (med 768px), (large 992px), (x-large 1200px)
         $width: $i * $col-width + ($i - 1) * 1
 
         .push-#{$i}
-          margin-right: 100% - $width
+          margin-right: $width + 1
 
         .pull-#{$i}
-          margin-right: 0
-          margin-left: 100% - $width
+          float: right
+          margin-right: $width + 1
 
       @media screen and (max-width: 543px)
         +keroseen-grid-generate-column-set($grid, x-small, $col-width)
@@ -77,3 +77,5 @@ $breakpoints: (small 544px), (med 768px), (large 992px), (x-large 1200px)
     float: none
     margin-left: auto
     margin-right: auto
+    &:first-child
+      margin-left: auto
