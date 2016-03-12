@@ -1,0 +1,113 @@
+h1 Keroseen Grid Demo
+
+p By default, the grid system builds with 9, 12, 16, 20, and 24 column grids. This can be changed by updating the value in /src/sass/_settings.sass to include more or fewer grids and running the Gulp task.
+
+p Each grid system comes in five sizes: x-small, small, med, large, and x-large. By default, the latter four also have corresponding breakpoints for when the screen is in portrait orientation. This option can be turned off in the /src/sass/_settings.sass file and running the Gulp task.
+
+p The columns had been offset in one of three ways:
+ul
+  li
+    | Putting space between the columns by using the 
+    code .push-#
+    |  class
+  li
+    | Right-aligning the columns by using the 
+    code .pull-#
+    |  class
+  li
+    | Center a column using the 
+    code .centered
+    |  class
+
+h2 Grid 9
+section.keroseen-grid.grid-9
+  .row.spacer
+    - for (var i = 0; i < 9; i++)
+      .col.small-1 .small-1
+  .row.spacer
+    .col.small-2 .small-2
+    .col.small-3 .small-3
+    .col.small-4 .small-4
+  .row.spacer
+    .col.small-4.centered .small-4.centered
+  .row.spacer
+    .col.small-2.push-1 .small-2.push-1
+    .col.small-6 .small-6
+  .row.spacer
+    .col.small-3 .small-3
+    .col.small-2.pull-1 .small-2.pull-1
+
+h2 Grid 12
+section.keroseen-grid.grid-12
+  .row.spacer
+    - for (var i = 0; i < 12; i++)
+      .col.small-1 .small-1
+  .row.spacer
+    .col.small-2 .small-2
+    .col.small-4 .small-4
+    .col.small-6 .small-6
+  .row.spacer
+    .col.small-5.centered .small-5.centered
+  .row.spacer
+    .col.small-2.push-3 .small-2.push-3
+    .col.small-7 .small-7
+  .row.spacer
+    .col.small-3 .small-3
+    .col.small-3.pull-1 .small-3.pull-1
+
+h2 Grid 16
+section.keroseen-grid.grid-16
+  .row.spacer
+    - for (var i = 0; i < 16; i++)
+      .col.small-1 .small-1
+  .row.spacer
+    .col.small-5 .small-5
+    .col.small-4 .small-4
+    .col.small-7 .small-7
+  .row.spacer
+    .col.small-9.centered .small-9.centered
+  .row.spacer
+    .col.small-4.push-4 .small-4.push-4
+    .col.small-4 .small-4
+    .col.small-4 .small-4
+  .row.spacer
+    .col.small-5 .small-5
+    .col.small-5.pull-3 .small-5.pull-3
+
+h2 Grid 20
+section.keroseen-grid.grid-20
+  .row.spacer
+    - for (var i = 0; i < 10; i++)
+      .col.small-2 .small-2
+  .row.spacer
+    .col.small-5 .small-5
+    .col.small-8 .small-8
+    .col.small-7 .small-7
+  .row.spacer
+    .col.small-11.centered .small-11.centered
+  .row.spacer
+    .col.small-5.push-5 .small-5.push-5
+    .col.small-5 .small-5
+    .col.small-5 .small-5
+  .row.spacer
+    .col.small-6 .small-6
+    .col.small-6.pull-3 .small-6.pull-3
+
+h2 Grid 24
+section.keroseen-grid.grid-24
+  .row.spacer
+    - for (var i = 0; i < 12; i++)
+      .col.small-2 .small-2
+  .row.spacer
+    .col.small-5 .small-9
+    .col.small-8 .small-8
+    .col.small-7 .small-7
+  .row.spacer
+    .col.small-15.centered .small-15.centered
+  .row.spacer
+    .col.small-6.push-6 .small-6.push-6
+    .col.small-6 .small-6
+    .col.small-6 .small-6
+  .row.spacer
+    .col.small-7 .small-7
+    .col.small-7.pull-5 .small-7.pull-5
