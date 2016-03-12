@@ -2,7 +2,7 @@
 
 Keroseen Grid is a flexible Sass-based grid system. It can generate any number of flexible grids with any number of columns by configuring a variable in the settings file. It can also generate grids for portrait orientation.
 
-## Bower Install
+## Bower
 
 Keroseen Grid is available for installation via Bower.
 
@@ -12,7 +12,7 @@ Keroseen Grid is available for installation via Bower.
 
 By default, the system compiles creates grids with 9, 12, 16, 20, and 24 columns. Since it's rare that a project will use more than one grid size, the settings file can be updated to include only the required grid sizes or even a custom size not listed above (ex: you can generate a 15 or 37 column grid if needed). Once updated, run `gulp` in the terminal to recompile the stylesheet.
 
-## Getting started with custom building
+## Custom Builds
 
 The required build tools can be installed by running:
 
