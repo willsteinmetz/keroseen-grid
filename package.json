@@ -1,6 +1,6 @@
 {
   "name": "keroseen-grid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A flexible and customizable grid system",
   "author": "Will Steinmetz <willsteinmetz@users.noreply.github.com>",
   "license": "BSD-3-Clause",
@@ -20,7 +20,7 @@
     "gulp-clean": "^0.3.1",
     "gulp-clean-css": "^2.0.3",
     "gulp-header": "^1.2.2",
-    "gulp-jade": "^1.1.0",
+    "gulp-pug": "^2.0.0",
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^0.7.1"
   }

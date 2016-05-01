@@ -12,7 +12,7 @@ var gulp       = require('gulp'),
   rename       = require('gulp-rename'),
   clean        = require('gulp-clean'),
   header       = require('gulp-header'),
-  jade         = require('gulp-jade');
+  pug          = require('gulp-pug');
 
 // styles task
 gulp.task('styles', ['clean-styles'], function () {
@@ -36,8 +36,8 @@ gulp.task('styles', ['clean-styles'], function () {
 
 // templates
 gulp.task('templates', ['clean-templates'], function() {
-  return gulp.src('src/jade/index.jade')
-    .pipe(jade())
+  return gulp.src('src/pug/index.pug')
+    .pipe(pug())
     .pipe(gulp.dest('demo'));
 });
 
@@ -64,6 +64,6 @@ gulp.task('default', ['clean-styles', 'clean-templates'], function () {
 gulp.task('watch', function() {
   // Watch .sass files
   gulp.watch('src/sass/**/*.sass', ['styles']);
-  // watch .jade files
-  gulp.watch('src/jade/**/*.jade', ['templates']);
+  // watch .pug files
+  gulp.watch('src/pug/**/*.pug', ['templates']);
 });
